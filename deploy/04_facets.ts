@@ -2,12 +2,9 @@ import { DeployFunction } from "hardhat-deploy/types";
 import {
   Diamond__factory,
   HRVSTFacet__factory,
-  IDiamondCut,
-  DiamondLoupeFacet__factory,
-  OwnershipFacet__factory,
   InitDiamond__factory,
-  DiamondCutFacet__factory,
   InitDiamond,
+  IDiamondWritableInternal,
 } from "../types";
 import { Ship } from "../utils";
 import { ContractWithSelectors } from "../utils/FacetUtils";
@@ -18,23 +15,18 @@ const func: DeployFunction = async (hre) => {
   const { deploy, accounts, connect } = await Ship.init(hre);
 
   const FacetCutAction = { Add: 0, Replace: 1, Remove: 2 };
-  const facets: (new () => ContractFactory)[] = [
-    DiamondLoupeFacet__factory,
-    OwnershipFacet__factory,
-    HRVSTFacet__factory,
-  ];
+  const facets: (new () => ContractFactory)[] = [HRVSTFacet__factory];
   const diamond = await connect(Diamond__factory);
   const diamondInit = await connect(InitDiamond__factory);
-  const diamondCut = await connect(DiamondCutFacet__factory, diamond.address);
 
-  const cuts: IDiamondCut.FacetCutStruct[] = [];
+  const cuts: IDiamondWritableInternal.FacetCutStruct[] = [];
   for (const Facet of facets) {
     const facet = await deploy(Facet);
     console.log(`deployed: ${facet.address}`);
     cuts.push({
-      facetAddress: facet.address,
+      target: facet.address,
       action: FacetCutAction.Add,
-      functionSelectors: new ContractWithSelectors(facet.contract).selectors,
+      selectors: new ContractWithSelectors(facet.contract).selectors,
     });
   }
 
@@ -57,7 +49,7 @@ const func: DeployFunction = async (hre) => {
 
   const calldata = diamondInit.interface.encodeFunctionData("init", [args]);
 
-  const tx = await diamondCut.diamondCut(cuts, diamondInit.address, calldata);
+  const tx = await diamond.diamondCut(cuts, diamondInit.address, calldata);
   await tx.wait();
 };
 

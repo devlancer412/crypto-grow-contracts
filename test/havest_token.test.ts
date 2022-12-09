@@ -1,12 +1,5 @@
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
-import {
-  Diamond,
-  Diamond__factory,
-  HRVSTFacet,
-  HRVSTFacet__factory,
-  OwnershipFacet,
-  OwnershipFacet__factory,
-} from "../types";
+import { Diamond, Diamond__factory, HRVSTFacet, HRVSTFacet__factory } from "../types";
 import { deployments } from "hardhat";
 import chai from "chai";
 import { solidity } from "ethereum-waffle";
@@ -15,11 +8,10 @@ import { constants } from "ethers";
 import { parseEther } from "ethers/lib/utils";
 
 chai.use(solidity);
-const { expect, assert } = chai;
+const { expect } = chai;
 
 let ship: Ship;
 let diamond: Diamond;
-let ownershipFacet: OwnershipFacet;
 let harvestFacet: HRVSTFacet;
 
 let alice: SignerWithAddress;
@@ -49,7 +41,6 @@ describe("Havest token test", () => {
     signer = scaffold.accounts.signer;
 
     diamond = await scaffold.ship.connect(Diamond__factory);
-    ownershipFacet = await scaffold.ship.connect(OwnershipFacet__factory, diamond.address);
     harvestFacet = await scaffold.ship.connect(HRVSTFacet__factory, diamond.address);
   });
 
@@ -78,7 +69,7 @@ describe("Havest token test", () => {
   });
 
   it("Deployment should assign the total supply of tokens to the owner", async function () {
-    const owner = await ownershipFacet.owner();
+    const owner = await diamond.owner();
     const ownerBalance = await harvestFacet.balanceOf(owner);
     expect(await harvestFacet.totalSupply()).to.eq(ownerBalance.add(parseEther("1")).toString());
   });

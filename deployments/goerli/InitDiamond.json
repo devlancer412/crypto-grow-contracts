@@ -1,0 +1,116 @@
+{
+  "address": "0x2cD5cc3fd4997e4439d689B6Fdb6932B65DDD4FC",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "dao",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "daoTreasury",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "cryptoGrow",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "rarityFarming",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "hrvstContract",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "chainlinkKeyHash",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "chainlinkFee",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "vrfCoordinator",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "linkAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "childChainManager",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "symbol",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct InitDiamond.Args",
+          "name": "_args",
+          "type": "tuple"
+        }
+      ],
+      "name": "init",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x1377c608081c004b4b4dbe10d2ca604606afc1a62f7b7397f79fd8bf0f0dd832",
+  "receipt": {
+    "to": null,
+    "from": "0xf5CA36c9873d61Bc28C117BD470981Ef6647A685",
+    "contractAddress": "0x2cD5cc3fd4997e4439d689B6Fdb6932B65DDD4FC",
+    "transactionIndex": 76,
+    "gasUsed": "418446",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x344578abfddc55a1b58397f86af978e50fea40f7a68751e3784e92f56eeb1a68",
+    "transactionHash": "0x1377c608081c004b4b4dbe10d2ca604606afc1a62f7b7397f79fd8bf0f0dd832",
+    "logs": [],
+    "blockNumber": 8104566,
+    "cumulativeGasUsed": "11035635",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "7128d6097e1722349a7cd3ded72bb486",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"dao\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"daoTreasury\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"cryptoGrow\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"rarityFarming\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"hrvstContract\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"chainlinkKeyHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"chainlinkFee\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"vrfCoordinator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"linkAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"childChainManager\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"symbol\",\"type\":\"string\"}],\"internalType\":\"struct InitDiamond.Args\",\"name\":\"_args\",\"type\":\"tuple\"}],\"name\":\"init\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/CryptoGrow/InitDiamond.sol\":\"InitDiamond\"},\"evmVersion\":\"london\",\"libraries\":{\":__CACHE_BREAKER__\":\"0x00000000d41867734bbee4c6863d9255b2b06ac1\"},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@solidstate/contracts/token/ERC20/metadata/ERC20MetadataStorage.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.8;\\n\\nlibrary ERC20MetadataStorage {\\n    struct Layout {\\n        string name;\\n        string symbol;\\n        uint8 decimals;\\n    }\\n\\n    bytes32 internal constant STORAGE_SLOT =\\n        keccak256('solidstate.contracts.storage.ERC20Metadata');\\n\\n    function layout() internal pure returns (Layout storage l) {\\n        bytes32 slot = STORAGE_SLOT;\\n        assembly {\\n            l.slot := slot\\n        }\\n    }\\n\\n    function setName(Layout storage l, string memory name) internal {\\n        l.name = name;\\n    }\\n\\n    function setSymbol(Layout storage l, string memory symbol) internal {\\n        l.symbol = symbol;\\n    }\\n\\n    function setDecimals(Layout storage l, uint8 decimals) internal {\\n        l.decimals = decimals;\\n    }\\n}\\n\",\"keccak256\":\"0xccb98abab437affd99b1345d27aa517d3597972b52666dd0e788af2b966c0125\",\"license\":\"MIT\"},\"contracts/CryptoGrow/InitDiamond.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\nimport {ILink} from \\\"./interfaces/ILink.sol\\\";\\n\\nimport {LibAppStorage} from \\\"./libraries/LibAppStorage.sol\\\";\\nimport {ERC20MetadataStorage} from \\\"@solidstate/contracts/token/ERC20/metadata/ERC20MetadataStorage.sol\\\";\\n\\ncontract InitDiamond {\\n  struct Args {\\n    address dao;\\n    address daoTreasury;\\n    address cryptoGrow;\\n    address rarityFarming;\\n    address hrvstContract;\\n    bytes32 chainlinkKeyHash;\\n    uint256 chainlinkFee;\\n    address vrfCoordinator;\\n    address linkAddress;\\n    address childChainManager;\\n    string name;\\n    string symbol;\\n  }\\n\\n  function init(Args memory _args) external {\\n    LibAppStorage.Layout storage appLayout = LibAppStorage.layout();\\n    appLayout.dao = _args.dao;\\n    appLayout.daoTreasury = _args.daoTreasury;\\n    appLayout.rarityFarming = _args.rarityFarming;\\n    appLayout.cryptoGrow = _args.cryptoGrow;\\n    appLayout.itemsBaseUri = \\\"https://cryptogrow.com/metadata/items/\\\";\\n    appLayout.childChainManager = _args.childChainManager;\\n\\n    appLayout.domainSeparator = _domainSeparator(\\\"cryptoGrowDiamond\\\", \\\"V1\\\");\\n\\n    appLayout.hrvstContract = _args.hrvstContract;\\n    appLayout.keyHash = _args.chainlinkKeyHash;\\n    appLayout.fee = uint144(_args.chainlinkFee);\\n    appLayout.vrfCoordinator = _args.vrfCoordinator;\\n    appLayout.link = ILink(_args.linkAddress);\\n\\n    appLayout.listingFeeInWei = 1e17;\\n\\n    ERC20MetadataStorage.Layout storage erc20Layout = ERC20MetadataStorage.layout();\\n    erc20Layout.name = _args.name;\\n    erc20Layout.symbol = _args.symbol;\\n    erc20Layout.decimals = 18;\\n  }\\n\\n  function _domainSeparator(\\n    string memory name,\\n    string memory version\\n  ) internal view returns (bytes32) {\\n    bytes32 hashedName = keccak256(bytes(name));\\n    bytes32 hashedVersion = keccak256(bytes(version));\\n    bytes32 typeHash = keccak256(\\n      \\\"EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)\\\"\\n    );\\n\\n    return keccak256(abi.encode(typeHash, hashedName, hashedVersion, block.chainid, address(this)));\\n  }\\n}\\n\",\"keccak256\":\"0x869446be08da99956496e252346090bc7ed663ef4bb279902d1e32ce089a31bf\",\"license\":\"MIT\"},\"contracts/CryptoGrow/interfaces/ILink.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\ninterface ILink {\\n  function decimals() external view returns (uint8);\\n\\n  function description() external view returns (string memory);\\n\\n  function version() external view returns (uint256);\\n\\n  function getRoundData(\\n    uint80 _roundId\\n  )\\n    external\\n    view\\n    returns (\\n      uint80 roundId,\\n      int256 answer,\\n      uint256 startedAt,\\n      uint256 updatedAt,\\n      uint80 answeredInRound\\n    );\\n\\n  function latestRoundData()\\n    external\\n    view\\n    returns (\\n      uint80 roundId,\\n      int256 answer,\\n      uint256 startedAt,\\n      uint256 updatedAt,\\n      uint80 answeredInRound\\n    );\\n}\\n\",\"keccak256\":\"0x1d113ffe22bf758b3f6a42f579977e8067c694f3ccd1cfbb8139dc410cd98f1f\",\"license\":\"MIT\"},\"contracts/CryptoGrow/libraries/LibAppStorage.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\nimport {ILink} from \\\"../interfaces/ILink.sol\\\";\\n\\nlibrary LibAppStorage {\\n  struct Layout {\\n    address dao;\\n    address daoTreasury;\\n    address cryptoGrow;\\n    address rarityFarming;\\n    address hrvstContract;\\n    address vrfCoordinator;\\n    address childChainManager;\\n    string itemsBaseUri;\\n    bytes32 domainSeparator;\\n    bytes32 keyHash;\\n    uint144 fee;\\n    ILink link;\\n    uint256 listingFeeInWei;\\n  }\\n\\n  bytes32 internal constant STORAGE_SLOT = keccak256(\\\"cryptogrow.contracts.storage.App\\\");\\n\\n  function layout() internal pure returns (Layout storage l) {\\n    bytes32 slot = STORAGE_SLOT;\\n    assembly {\\n      l.slot := slot\\n    }\\n  }\\n\\n  function setDomainSeparator(string memory name, string memory version) public {\\n    bytes32 hashedName = keccak256(bytes(name));\\n    bytes32 hashedVersion = keccak256(bytes(version));\\n    bytes32 typeHash = keccak256(\\n      \\\"EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)\\\"\\n    );\\n\\n    layout().domainSeparator = keccak256(\\n      abi.encode(typeHash, hashedName, hashedVersion, block.chainid, address(this))\\n    );\\n  }\\n}\\n\",\"keccak256\":\"0x4b576105f42b9c0cf8bbb4acdcf5f838d2466bfcdd821f330684e75e2a706a77\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061069a806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063d66736fe14610030575b600080fd5b61004361003e3660046104cd565b610045565b005b80517f72fab1b3b0ef08a69b37c2aab5b9515b729499690ee1e961a2f6ccfc5d4e456780546001600160a01b03199081166001600160a01b039384161782556020808501517f72fab1b3b0ef08a69b37c2aab5b9515b729499690ee1e961a2f6ccfc5d4e4568805484169186169190911790556060808601517f72fab1b3b0ef08a69b37c2aab5b9515b729499690ee1e961a2f6ccfc5d4e456a805485169187169190911790556040808701517f72fab1b3b0ef08a69b37c2aab5b9515b729499690ee1e961a2f6ccfc5d4e4569805490951696169590951790925583519182019093526026808252919290919061063f90830139805161015091600784019160209091019061034b565b506101208201516006820180546001600160a01b0319166001600160a01b03909216919091179055604080518082018252601181527018dc9e5c1d1bd1dc9bddd11a585b5bdb99607a1b6020808301918252835180850185526002815261563160f01b908201529151902082517f8b73c3c69bb8fe3d512ecc4cf759cc79239f7b179b0ffacaa9a75d522b39400f81840152808401919091527f4c23426613a5dc69e08fbd2787e6210aa679d4522e95a89d4dd88c4fd13a228360608201524660808201523060a0808301919091528351808303909101815260c09091019092528151910120600882015560808201516004820180546001600160a01b03199081166001600160a01b039384161790915560a0840151600984015560c0840151600a8401805471ffffffffffffffffffffffffffffffffffff191671ffffffffffffffffffffffffffffffffffff90921691909117905560e08401516005840180548316918416919091179055610100840151600b84018054909216921691909117905567016345785d8a0000600c82015561014082015180517f2967a798b92539a1b9eefe4d8eb931f96b68d27665e276f1bee2d5db7f7430479161031b9183916020019061034b565b50610160830151805161033891600184019160209091019061034b565b50600201805460ff191660121790555050565b82805461035790610603565b90600052602060002090601f01602090048101928261037957600085556103bf565b82601f1061039257805160ff19168380011785556103bf565b828001600101855582156103bf579182015b828111156103bf5782518255916020019190600101906103a4565b506103cb9291506103cf565b5090565b5b808211156103cb57600081556001016103d0565b634e487b7160e01b600052604160045260246000fd5b604051610180810167ffffffffffffffff8111828210171561041e5761041e6103e4565b60405290565b80356001600160a01b038116811461043b57600080fd5b919050565b600082601f83011261045157600080fd5b813567ffffffffffffffff8082111561046c5761046c6103e4565b604051601f8301601f19908116603f01168101908282118183101715610494576104946103e4565b816040528381528660208588010111156104ad57600080fd5b836020870160208301376000602085830101528094505050505092915050565b6000602082840312156104df57600080fd5b813567ffffffffffffffff808211156104f757600080fd5b90830190610180828603121561050c57600080fd5b6105146103fa565b61051d83610424565b815261052b60208401610424565b602082015261053c60408401610424565b604082015261054d60608401610424565b606082015261055e60808401610424565b608082015260a083013560a082015260c083013560c082015261058360e08401610424565b60e0820152610100610596818501610424565b908201526101206105a8848201610424565b9082015261014083810135838111156105c057600080fd5b6105cc88828701610440565b82840152505061016080840135838111156105e657600080fd5b6105f288828701610440565b918301919091525095945050505050565b600181811c9082168061061757607f821691505b6020821081141561063857634e487b7160e01b600052602260045260246000fd5b5091905056fe68747470733a2f2f63727970746f67726f772e636f6d2f6d657461646174612f6974656d732fa2646970667358221220e07b66395c94265fccd8db74ee798ae7a7d97d1fbb7459e27124c2078c395e1864736f6c63430008090033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c8063d66736fe14610030575b600080fd5b61004361003e3660046104cd565b610045565b005b80517f72fab1b3b0ef08a69b37c2aab5b9515b729499690ee1e961a2f6ccfc5d4e456780546001600160a01b03199081166001600160a01b039384161782556020808501517f72fab1b3b0ef08a69b37c2aab5b9515b729499690ee1e961a2f6ccfc5d4e4568805484169186169190911790556060808601517f72fab1b3b0ef08a69b37c2aab5b9515b729499690ee1e961a2f6ccfc5d4e456a805485169187169190911790556040808701517f72fab1b3b0ef08a69b37c2aab5b9515b729499690ee1e961a2f6ccfc5d4e4569805490951696169590951790925583519182019093526026808252919290919061063f90830139805161015091600784019160209091019061034b565b506101208201516006820180546001600160a01b0319166001600160a01b03909216919091179055604080518082018252601181527018dc9e5c1d1bd1dc9bddd11a585b5bdb99607a1b6020808301918252835180850185526002815261563160f01b908201529151902082517f8b73c3c69bb8fe3d512ecc4cf759cc79239f7b179b0ffacaa9a75d522b39400f81840152808401919091527f4c23426613a5dc69e08fbd2787e6210aa679d4522e95a89d4dd88c4fd13a228360608201524660808201523060a0808301919091528351808303909101815260c09091019092528151910120600882015560808201516004820180546001600160a01b03199081166001600160a01b039384161790915560a0840151600984015560c0840151600a8401805471ffffffffffffffffffffffffffffffffffff191671ffffffffffffffffffffffffffffffffffff90921691909117905560e08401516005840180548316918416919091179055610100840151600b84018054909216921691909117905567016345785d8a0000600c82015561014082015180517f2967a798b92539a1b9eefe4d8eb931f96b68d27665e276f1bee2d5db7f7430479161031b9183916020019061034b565b50610160830151805161033891600184019160209091019061034b565b50600201805460ff191660121790555050565b82805461035790610603565b90600052602060002090601f01602090048101928261037957600085556103bf565b82601f1061039257805160ff19168380011785556103bf565b828001600101855582156103bf579182015b828111156103bf5782518255916020019190600101906103a4565b506103cb9291506103cf565b5090565b5b808211156103cb57600081556001016103d0565b634e487b7160e01b600052604160045260246000fd5b604051610180810167ffffffffffffffff8111828210171561041e5761041e6103e4565b60405290565b80356001600160a01b038116811461043b57600080fd5b919050565b600082601f83011261045157600080fd5b813567ffffffffffffffff8082111561046c5761046c6103e4565b604051601f8301601f19908116603f01168101908282118183101715610494576104946103e4565b816040528381528660208588010111156104ad57600080fd5b836020870160208301376000602085830101528094505050505092915050565b6000602082840312156104df57600080fd5b813567ffffffffffffffff808211156104f757600080fd5b90830190610180828603121561050c57600080fd5b6105146103fa565b61051d83610424565b815261052b60208401610424565b602082015261053c60408401610424565b604082015261054d60608401610424565b606082015261055e60808401610424565b608082015260a083013560a082015260c083013560c082015261058360e08401610424565b60e0820152610100610596818501610424565b908201526101206105a8848201610424565b9082015261014083810135838111156105c057600080fd5b6105cc88828701610440565b82840152505061016080840135838111156105e657600080fd5b6105f288828701610440565b918301919091525095945050505050565b600181811c9082168061061757607f821691505b6020821081141561063857634e487b7160e01b600052602260045260246000fd5b5091905056fe68747470733a2f2f63727970746f67726f772e636f6d2f6d657461646174612f6974656d732fa2646970667358221220e07b66395c94265fccd8db74ee798ae7a7d97d1fbb7459e27124c2078c395e1864736f6c63430008090033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

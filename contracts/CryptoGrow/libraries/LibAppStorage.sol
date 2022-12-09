@@ -28,4 +28,16 @@ library LibAppStorage {
       l.slot := slot
     }
   }
+
+  function setDomainSeparator(string memory name, string memory version) public {
+    bytes32 hashedName = keccak256(bytes(name));
+    bytes32 hashedVersion = keccak256(bytes(version));
+    bytes32 typeHash = keccak256(
+      "EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"
+    );
+
+    layout().domainSeparator = keccak256(
+      abi.encode(typeHash, hashedName, hashedVersion, block.chainid, address(this))
+    );
+  }
 }

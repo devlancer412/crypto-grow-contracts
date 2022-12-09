@@ -1,0 +1,505 @@
+{
+  "address": "0xc35219dFaF9a8531cdfa2E5ECeaF1899414a33AD",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "ERC20Base__ApproveFromZeroAddress",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ERC20Base__ApproveToZeroAddress",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ERC20Base__BurnExceedsBalance",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ERC20Base__BurnFromZeroAddress",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ERC20Base__InsufficientAllowance",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ERC20Base__MintToZeroAddress",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ERC20Base__TransferExceedsBalance",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ERC20Base__TransferFromZeroAddress",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ERC20Base__TransferToZeroAddress",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ERC20Extended__ExcessiveAllowance",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ERC20Extended__InsufficientAllowance",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "holder",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        }
+      ],
+      "name": "allowance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "decreaseAllowance",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "increaseAllowance",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "mint",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "mintTo",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "holder",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xa22c3f7afb6ef82961530850747203157306ee5e6070c551bb74331fba271f95",
+  "receipt": {
+    "to": null,
+    "from": "0xf5CA36c9873d61Bc28C117BD470981Ef6647A685",
+    "contractAddress": "0xc35219dFaF9a8531cdfa2E5ECeaF1899414a33AD",
+    "transactionIndex": 77,
+    "gasUsed": "590130",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x86c5313f832cfe5b8c63c12cea0715a6fc6f15923b41bfa0f2d15640e61e3bf9",
+    "transactionHash": "0xa22c3f7afb6ef82961530850747203157306ee5e6070c551bb74331fba271f95",
+    "logs": [],
+    "blockNumber": 8104568,
+    "cumulativeGasUsed": "16714981",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "7128d6097e1722349a7cd3ded72bb486",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"ERC20Base__ApproveFromZeroAddress\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ERC20Base__ApproveToZeroAddress\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ERC20Base__BurnExceedsBalance\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ERC20Base__BurnFromZeroAddress\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ERC20Base__InsufficientAllowance\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ERC20Base__MintToZeroAddress\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ERC20Base__TransferExceedsBalance\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ERC20Base__TransferFromZeroAddress\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ERC20Base__TransferToZeroAddress\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ERC20Extended__ExcessiveAllowance\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ERC20Extended__InsufficientAllowance\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"holder\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"decreaseAllowance\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"increaseAllowance\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"mint\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"}],\"name\":\"mintTo\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"holder\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"allowance(address,address)\":{\"params\":{\"holder\":\"approver of allowance\",\"spender\":\"recipient of allowance\"},\"returns\":{\"_0\":\"token allowance\"}},\"approve(address,uint256)\":{\"details\":\"prefer ERC20Extended functions to avoid transaction-ordering vulnerability (see https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729)\",\"params\":{\"amount\":\"quantity of tokens approved for spending\",\"spender\":\"recipient of allowance\"},\"returns\":{\"_0\":\"success status (always true; otherwise function should revert)\"}},\"balanceOf(address)\":{\"params\":{\"account\":\"address to query\"},\"returns\":{\"_0\":\"token balance\"}},\"decimals()\":{\"returns\":{\"_0\":\"token decimals\"}},\"decreaseAllowance(address,uint256)\":{\"params\":{\"amount\":\"quantity by which to decrease allowance\",\"spender\":\"address whose allowance to decrease\"},\"returns\":{\"_0\":\"success status (always true; otherwise function will revert)\"}},\"increaseAllowance(address,uint256)\":{\"params\":{\"amount\":\"quantity by which to increase allowance\",\"spender\":\"address whose allowance to increase\"},\"returns\":{\"_0\":\"success status (always true; otherwise function will revert)\"}},\"name()\":{\"returns\":{\"_0\":\"token name\"}},\"symbol()\":{\"returns\":{\"_0\":\"token symbol\"}},\"totalSupply()\":{\"returns\":{\"_0\":\"token supply\"}},\"transfer(address,uint256)\":{\"params\":{\"amount\":\"quantity of tokens to transfer\",\"recipient\":\"beneficiary of token transfer\"},\"returns\":{\"_0\":\"success status (always true; otherwise function should revert)\"}},\"transferFrom(address,address,uint256)\":{\"params\":{\"amount\":\"quantity of tokens to transfer\",\"holder\":\"holder of tokens prior to transfer\",\"recipient\":\"beneficiary of token transfer\"},\"returns\":{\"_0\":\"success status (always true; otherwise function should revert)\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"allowance(address,address)\":{\"notice\":\"query the allowance granted from given holder to given spender\"},\"approve(address,uint256)\":{\"notice\":\"grant approval to spender to spend tokens\"},\"balanceOf(address)\":{\"notice\":\"query the token balance of given account\"},\"decimals()\":{\"notice\":\"return token decimals, generally used only for display purposes\"},\"decreaseAllowance(address,uint256)\":{\"notice\":\"decrease spend amount granted to spender\"},\"increaseAllowance(address,uint256)\":{\"notice\":\"increase spend amount granted to spender\"},\"name()\":{\"notice\":\"return token name\"},\"symbol()\":{\"notice\":\"return token symbol\"},\"totalSupply()\":{\"notice\":\"query the total minted token supply\"},\"transfer(address,uint256)\":{\"notice\":\"transfer tokens to given recipient\"},\"transferFrom(address,address,uint256)\":{\"notice\":\"transfer tokens to given recipient on behalf of given holder\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/CryptoGrow/facets/HarvestFacet.sol\":\"HRVSTFacet\"},\"evmVersion\":\"london\",\"libraries\":{\":__CACHE_BREAKER__\":\"0x00000000d41867734bbee4c6863d9255b2b06ac1\"},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@solidstate/contracts/interfaces/IERC20.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.8;\\n\\nimport { IERC20Internal } from './IERC20Internal.sol';\\n\\n/**\\n * @title ERC20 interface\\n * @dev see https://github.com/ethereum/EIPs/issues/20\\n */\\ninterface IERC20 is IERC20Internal {\\n    /**\\n     * @notice query the total minted token supply\\n     * @return token supply\\n     */\\n    function totalSupply() external view returns (uint256);\\n\\n    /**\\n     * @notice query the token balance of given account\\n     * @param account address to query\\n     * @return token balance\\n     */\\n    function balanceOf(address account) external view returns (uint256);\\n\\n    /**\\n     * @notice query the allowance granted from given holder to given spender\\n     * @param holder approver of allowance\\n     * @param spender recipient of allowance\\n     * @return token allowance\\n     */\\n    function allowance(\\n        address holder,\\n        address spender\\n    ) external view returns (uint256);\\n\\n    /**\\n     * @notice grant approval to spender to spend tokens\\n     * @dev prefer ERC20Extended functions to avoid transaction-ordering vulnerability (see https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729)\\n     * @param spender recipient of allowance\\n     * @param amount quantity of tokens approved for spending\\n     * @return success status (always true; otherwise function should revert)\\n     */\\n    function approve(address spender, uint256 amount) external returns (bool);\\n\\n    /**\\n     * @notice transfer tokens to given recipient\\n     * @param recipient beneficiary of token transfer\\n     * @param amount quantity of tokens to transfer\\n     * @return success status (always true; otherwise function should revert)\\n     */\\n    function transfer(\\n        address recipient,\\n        uint256 amount\\n    ) external returns (bool);\\n\\n    /**\\n     * @notice transfer tokens to given recipient on behalf of given holder\\n     * @param holder holder of tokens prior to transfer\\n     * @param recipient beneficiary of token transfer\\n     * @param amount quantity of tokens to transfer\\n     * @return success status (always true; otherwise function should revert)\\n     */\\n    function transferFrom(\\n        address holder,\\n        address recipient,\\n        uint256 amount\\n    ) external returns (bool);\\n}\\n\",\"keccak256\":\"0xb6cf9a675a98c26431c526340e999f383e90f3c32565b4e4199d0c76dc363f09\",\"license\":\"MIT\"},\"@solidstate/contracts/interfaces/IERC20Internal.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.8;\\n\\n/**\\n * @title Partial ERC20 interface needed by internal functions\\n */\\ninterface IERC20Internal {\\n    event Transfer(address indexed from, address indexed to, uint256 value);\\n\\n    event Approval(\\n        address indexed owner,\\n        address indexed spender,\\n        uint256 value\\n    );\\n}\\n\",\"keccak256\":\"0x5dc63954123c58280a48da71f91c435dd7373f56bd472867c80177359c885e53\",\"license\":\"MIT\"},\"@solidstate/contracts/token/ERC20/base/ERC20Base.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.8;\\n\\nimport { IERC20 } from '../../../interfaces/IERC20.sol';\\nimport { IERC20Base } from './IERC20Base.sol';\\nimport { ERC20BaseInternal } from './ERC20BaseInternal.sol';\\nimport { ERC20BaseStorage } from './ERC20BaseStorage.sol';\\n\\n/**\\n * @title Base ERC20 implementation, excluding optional extensions\\n */\\nabstract contract ERC20Base is IERC20Base, ERC20BaseInternal {\\n    /**\\n     * @inheritdoc IERC20\\n     */\\n    function totalSupply() public view virtual returns (uint256) {\\n        return _totalSupply();\\n    }\\n\\n    /**\\n     * @inheritdoc IERC20\\n     */\\n    function balanceOf(address account) public view virtual returns (uint256) {\\n        return _balanceOf(account);\\n    }\\n\\n    /**\\n     * @inheritdoc IERC20\\n     */\\n    function allowance(\\n        address holder,\\n        address spender\\n    ) public view virtual returns (uint256) {\\n        return _allowance(holder, spender);\\n    }\\n\\n    /**\\n     * @inheritdoc IERC20\\n     */\\n    function approve(\\n        address spender,\\n        uint256 amount\\n    ) public virtual returns (bool) {\\n        return _approve(msg.sender, spender, amount);\\n    }\\n\\n    /**\\n     * @inheritdoc IERC20\\n     */\\n    function transfer(\\n        address recipient,\\n        uint256 amount\\n    ) public virtual returns (bool) {\\n        return _transfer(msg.sender, recipient, amount);\\n    }\\n\\n    /**\\n     * @inheritdoc IERC20\\n     */\\n    function transferFrom(\\n        address holder,\\n        address recipient,\\n        uint256 amount\\n    ) public virtual returns (bool) {\\n        return _transferFrom(holder, recipient, amount);\\n    }\\n}\\n\",\"keccak256\":\"0x57cc5edf43a3ac4ebd1e97e0cd065261ad49d82a016221f6ede319fbc45ece1c\",\"license\":\"MIT\"},\"@solidstate/contracts/token/ERC20/base/ERC20BaseInternal.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.8;\\n\\nimport { IERC20BaseInternal } from './IERC20BaseInternal.sol';\\nimport { ERC20BaseStorage } from './ERC20BaseStorage.sol';\\n\\n/**\\n * @title Base ERC20 internal functions, excluding optional extensions\\n */\\nabstract contract ERC20BaseInternal is IERC20BaseInternal {\\n    /**\\n     * @notice query the total minted token supply\\n     * @return token supply\\n     */\\n    function _totalSupply() internal view virtual returns (uint256) {\\n        return ERC20BaseStorage.layout().totalSupply;\\n    }\\n\\n    /**\\n     * @notice query the token balance of given account\\n     * @param account address to query\\n     * @return token balance\\n     */\\n    function _balanceOf(\\n        address account\\n    ) internal view virtual returns (uint256) {\\n        return ERC20BaseStorage.layout().balances[account];\\n    }\\n\\n    /**\\n     * @notice query the allowance granted from given holder to given spender\\n     * @param holder approver of allowance\\n     * @param spender recipient of allowance\\n     * @return token allowance\\n     */\\n    function _allowance(\\n        address holder,\\n        address spender\\n    ) internal view virtual returns (uint256) {\\n        return ERC20BaseStorage.layout().allowances[holder][spender];\\n    }\\n\\n    /**\\n     * @notice enable spender to spend tokens on behalf of holder\\n     * @param holder address on whose behalf tokens may be spent\\n     * @param spender recipient of allowance\\n     * @param amount quantity of tokens approved for spending\\n     * @return success status (always true; otherwise function should revert)\\n     */\\n    function _approve(\\n        address holder,\\n        address spender,\\n        uint256 amount\\n    ) internal virtual returns (bool) {\\n        if (holder == address(0)) revert ERC20Base__ApproveFromZeroAddress();\\n        if (spender == address(0)) revert ERC20Base__ApproveToZeroAddress();\\n\\n        ERC20BaseStorage.layout().allowances[holder][spender] = amount;\\n\\n        emit Approval(holder, spender, amount);\\n\\n        return true;\\n    }\\n\\n    /**\\n     * @notice decrease spend amount granted by holder to spender\\n     * @param holder address on whose behalf tokens may be spent\\n     * @param spender address whose allowance to decrease\\n     * @param amount quantity by which to decrease allowance\\n     */\\n    function _decreaseAllowance(\\n        address holder,\\n        address spender,\\n        uint256 amount\\n    ) internal {\\n        uint256 allowance = _allowance(holder, spender);\\n\\n        if (amount > allowance) revert ERC20Base__InsufficientAllowance();\\n\\n        unchecked {\\n            _approve(holder, spender, allowance - amount);\\n        }\\n    }\\n\\n    /**\\n     * @notice mint tokens for given account\\n     * @param account recipient of minted tokens\\n     * @param amount quantity of tokens minted\\n     */\\n    function _mint(address account, uint256 amount) internal virtual {\\n        if (account == address(0)) revert ERC20Base__MintToZeroAddress();\\n\\n        _beforeTokenTransfer(address(0), account, amount);\\n\\n        ERC20BaseStorage.Layout storage l = ERC20BaseStorage.layout();\\n        l.totalSupply += amount;\\n        l.balances[account] += amount;\\n\\n        emit Transfer(address(0), account, amount);\\n    }\\n\\n    /**\\n     * @notice burn tokens held by given account\\n     * @param account holder of burned tokens\\n     * @param amount quantity of tokens burned\\n     */\\n    function _burn(address account, uint256 amount) internal virtual {\\n        if (account == address(0)) revert ERC20Base__BurnFromZeroAddress();\\n\\n        _beforeTokenTransfer(account, address(0), amount);\\n\\n        ERC20BaseStorage.Layout storage l = ERC20BaseStorage.layout();\\n        uint256 balance = l.balances[account];\\n        if (amount > balance) revert ERC20Base__BurnExceedsBalance();\\n        unchecked {\\n            l.balances[account] = balance - amount;\\n        }\\n        l.totalSupply -= amount;\\n\\n        emit Transfer(account, address(0), amount);\\n    }\\n\\n    /**\\n     * @notice transfer tokens from holder to recipient\\n     * @param holder owner of tokens to be transferred\\n     * @param recipient beneficiary of transfer\\n     * @param amount quantity of tokens transferred\\n     * @return success status (always true; otherwise function should revert)\\n     */\\n    function _transfer(\\n        address holder,\\n        address recipient,\\n        uint256 amount\\n    ) internal virtual returns (bool) {\\n        if (holder == address(0)) revert ERC20Base__TransferFromZeroAddress();\\n        if (recipient == address(0)) revert ERC20Base__TransferToZeroAddress();\\n\\n        _beforeTokenTransfer(holder, recipient, amount);\\n\\n        ERC20BaseStorage.Layout storage l = ERC20BaseStorage.layout();\\n        uint256 holderBalance = l.balances[holder];\\n        if (amount > holderBalance) revert ERC20Base__TransferExceedsBalance();\\n        unchecked {\\n            l.balances[holder] = holderBalance - amount;\\n        }\\n        l.balances[recipient] += amount;\\n\\n        emit Transfer(holder, recipient, amount);\\n\\n        return true;\\n    }\\n\\n    /**\\n     * @notice transfer tokens to given recipient on behalf of given holder\\n     * @param holder holder of tokens prior to transfer\\n     * @param recipient beneficiary of token transfer\\n     * @param amount quantity of tokens to transfer\\n     * @return success status (always true; otherwise function should revert)\\n     */\\n    function _transferFrom(\\n        address holder,\\n        address recipient,\\n        uint256 amount\\n    ) internal virtual returns (bool) {\\n        _decreaseAllowance(holder, msg.sender, amount);\\n\\n        _transfer(holder, recipient, amount);\\n\\n        return true;\\n    }\\n\\n    /**\\n     * @notice ERC20 hook, called before all transfers including mint and burn\\n     * @dev function should be overridden and new implementation must call super\\n     * @param from sender of tokens\\n     * @param to receiver of tokens\\n     * @param amount quantity of tokens transferred\\n     */\\n    function _beforeTokenTransfer(\\n        address from,\\n        address to,\\n        uint256 amount\\n    ) internal virtual {}\\n}\\n\",\"keccak256\":\"0x571018562f714dbca7adb396b214a87b8fca12278aa706bb2ff5cbc8f4e0e970\",\"license\":\"MIT\"},\"@solidstate/contracts/token/ERC20/base/ERC20BaseStorage.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.8;\\n\\nlibrary ERC20BaseStorage {\\n    struct Layout {\\n        mapping(address => uint256) balances;\\n        mapping(address => mapping(address => uint256)) allowances;\\n        uint256 totalSupply;\\n    }\\n\\n    bytes32 internal constant STORAGE_SLOT =\\n        keccak256('solidstate.contracts.storage.ERC20Base');\\n\\n    function layout() internal pure returns (Layout storage l) {\\n        bytes32 slot = STORAGE_SLOT;\\n        assembly {\\n            l.slot := slot\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x77c4f688fd58ae32a15d63103581c6a20466790f1e68b6b1db687e8707fee7b1\",\"license\":\"MIT\"},\"@solidstate/contracts/token/ERC20/base/IERC20Base.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.8;\\n\\nimport { IERC20 } from '../../../interfaces/IERC20.sol';\\nimport { IERC20BaseInternal } from './IERC20BaseInternal.sol';\\n\\n/**\\n * @title ERC20 base interface\\n */\\ninterface IERC20Base is IERC20BaseInternal, IERC20 {\\n\\n}\\n\",\"keccak256\":\"0x83fcb688381ff4fba9bc068d490d3f0fd83abd5e5ee46f24cfb18ae1906e071e\",\"license\":\"MIT\"},\"@solidstate/contracts/token/ERC20/base/IERC20BaseInternal.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.8;\\n\\nimport { IERC20Internal } from '../../../interfaces/IERC20Internal.sol';\\n\\n/**\\n * @title ERC20 base interface\\n */\\ninterface IERC20BaseInternal is IERC20Internal {\\n    error ERC20Base__ApproveFromZeroAddress();\\n    error ERC20Base__ApproveToZeroAddress();\\n    error ERC20Base__BurnExceedsBalance();\\n    error ERC20Base__BurnFromZeroAddress();\\n    error ERC20Base__InsufficientAllowance();\\n    error ERC20Base__MintToZeroAddress();\\n    error ERC20Base__TransferExceedsBalance();\\n    error ERC20Base__TransferFromZeroAddress();\\n    error ERC20Base__TransferToZeroAddress();\\n}\\n\",\"keccak256\":\"0xa9c47a0ad2ab7f043a283ff148a8e4cf61d98f05fbed8d9ce35f6a0a403cc17f\",\"license\":\"MIT\"},\"@solidstate/contracts/token/ERC20/extended/ERC20Extended.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.8;\\n\\nimport { IERC20Extended } from './IERC20Extended.sol';\\nimport { ERC20ExtendedInternal } from './ERC20ExtendedInternal.sol';\\n\\n/**\\n * @title ERC20 safe approval extensions\\n * @dev mitigations for transaction-ordering vulnerability (see https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729)\\n */\\nabstract contract ERC20Extended is IERC20Extended, ERC20ExtendedInternal {\\n    /**\\n     * @inheritdoc IERC20Extended\\n     */\\n    function increaseAllowance(\\n        address spender,\\n        uint256 amount\\n    ) external returns (bool) {\\n        return _increaseAllowance(spender, amount);\\n    }\\n\\n    /**\\n     * @inheritdoc IERC20Extended\\n     */\\n    function decreaseAllowance(\\n        address spender,\\n        uint256 amount\\n    ) external returns (bool) {\\n        return _decreaseAllowance(spender, amount);\\n    }\\n}\\n\",\"keccak256\":\"0x8fc1235a301b4a1d794118c363a078f13f0ea5ffe6ab6b1cc7e7409980fa1619\",\"license\":\"MIT\"},\"@solidstate/contracts/token/ERC20/extended/ERC20ExtendedInternal.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.8;\\n\\nimport { ERC20BaseInternal, ERC20BaseStorage } from '../base/ERC20Base.sol';\\nimport { IERC20ExtendedInternal } from './IERC20ExtendedInternal.sol';\\n\\n/**\\n * @title ERC20 safe approval extensions\\n * @dev mitigations for transaction-ordering vulnerability (see https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729)\\n */\\nabstract contract ERC20ExtendedInternal is\\n    ERC20BaseInternal,\\n    IERC20ExtendedInternal\\n{\\n    /**\\n     * @notice increase spend amount granted to spender\\n     * @param spender address whose allowance to increase\\n     * @param amount quantity by which to increase allowance\\n     * @return success status (always true; otherwise function will revert)\\n     */\\n    function _increaseAllowance(\\n        address spender,\\n        uint256 amount\\n    ) internal virtual returns (bool) {\\n        uint256 allowance = _allowance(msg.sender, spender);\\n\\n        unchecked {\\n            if (allowance > allowance + amount)\\n                revert ERC20Extended__ExcessiveAllowance();\\n\\n            return _approve(msg.sender, spender, allowance + amount);\\n        }\\n    }\\n\\n    /**\\n     * @notice decrease spend amount granted to spender\\n     * @param spender address whose allowance to decrease\\n     * @param amount quantity by which to decrease allowance\\n     * @return success status (always true; otherwise function will revert)\\n     */\\n    function _decreaseAllowance(\\n        address spender,\\n        uint256 amount\\n    ) internal virtual returns (bool) {\\n        _decreaseAllowance(msg.sender, spender, amount);\\n\\n        return true;\\n    }\\n}\\n\",\"keccak256\":\"0xd32ec9a244d7daf96059884e29acbd9cac4597885fc27db717d855a15769fb74\",\"license\":\"MIT\"},\"@solidstate/contracts/token/ERC20/extended/IERC20Extended.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.8;\\n\\nimport { IERC20ExtendedInternal } from './IERC20ExtendedInternal.sol';\\n\\n/**\\n * @title ERC20 extended interface\\n */\\ninterface IERC20Extended is IERC20ExtendedInternal {\\n    /**\\n     * @notice increase spend amount granted to spender\\n     * @param spender address whose allowance to increase\\n     * @param amount quantity by which to increase allowance\\n     * @return success status (always true; otherwise function will revert)\\n     */\\n    function increaseAllowance(\\n        address spender,\\n        uint256 amount\\n    ) external returns (bool);\\n\\n    /**\\n     * @notice decrease spend amount granted to spender\\n     * @param spender address whose allowance to decrease\\n     * @param amount quantity by which to decrease allowance\\n     * @return success status (always true; otherwise function will revert)\\n     */\\n    function decreaseAllowance(\\n        address spender,\\n        uint256 amount\\n    ) external returns (bool);\\n}\\n\",\"keccak256\":\"0x2eaa3907a62acc5b79fcbc90773c458ed4fcb6885b92aea56598b62af51fbd9c\",\"license\":\"MIT\"},\"@solidstate/contracts/token/ERC20/extended/IERC20ExtendedInternal.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.8;\\n\\nimport { IERC20BaseInternal } from '../base/IERC20BaseInternal.sol';\\n\\n/**\\n * @title ERC20 extended internal interface\\n */\\ninterface IERC20ExtendedInternal is IERC20BaseInternal {\\n    error ERC20Extended__ExcessiveAllowance();\\n    error ERC20Extended__InsufficientAllowance();\\n}\\n\",\"keccak256\":\"0x6fa7ab02fbac8389c99d4854ff7f6bf0de08459c167e5bbab15138b177b55de4\",\"license\":\"MIT\"},\"@solidstate/contracts/token/ERC20/metadata/ERC20Metadata.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.8;\\n\\nimport { IERC20Metadata } from './IERC20Metadata.sol';\\nimport { ERC20MetadataInternal } from './ERC20MetadataInternal.sol';\\n\\n/**\\n * @title ERC20 metadata extensions\\n */\\nabstract contract ERC20Metadata is IERC20Metadata, ERC20MetadataInternal {\\n    /**\\n     * @inheritdoc IERC20Metadata\\n     */\\n    function name() external view returns (string memory) {\\n        return _name();\\n    }\\n\\n    /**\\n     * @inheritdoc IERC20Metadata\\n     */\\n    function symbol() external view returns (string memory) {\\n        return _symbol();\\n    }\\n\\n    /**\\n     * @inheritdoc IERC20Metadata\\n     */\\n    function decimals() external view returns (uint8) {\\n        return _decimals();\\n    }\\n}\\n\",\"keccak256\":\"0x57b284c9dadfb1ace56b1db778cb72b922d60f228e0c4f90299c7392be004473\",\"license\":\"MIT\"},\"@solidstate/contracts/token/ERC20/metadata/ERC20MetadataInternal.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.8;\\n\\nimport { IERC20MetadataInternal } from './IERC20MetadataInternal.sol';\\nimport { ERC20MetadataStorage } from './ERC20MetadataStorage.sol';\\n\\n/**\\n * @title ERC20Metadata internal functions\\n */\\nabstract contract ERC20MetadataInternal is IERC20MetadataInternal {\\n    /**\\n     * @notice return token name\\n     * @return token name\\n     */\\n    function _name() internal view virtual returns (string memory) {\\n        return ERC20MetadataStorage.layout().name;\\n    }\\n\\n    /**\\n     * @notice return token symbol\\n     * @return token symbol\\n     */\\n    function _symbol() internal view virtual returns (string memory) {\\n        return ERC20MetadataStorage.layout().symbol;\\n    }\\n\\n    /**\\n     * @notice return token decimals, generally used only for display purposes\\n     * @return token decimals\\n     */\\n    function _decimals() internal view virtual returns (uint8) {\\n        return ERC20MetadataStorage.layout().decimals;\\n    }\\n}\\n\",\"keccak256\":\"0x741a986dead517a577f2eb02e48c2e4b55a2bf99b22a12b2a3eba828ca147ce6\",\"license\":\"MIT\"},\"@solidstate/contracts/token/ERC20/metadata/ERC20MetadataStorage.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.8;\\n\\nlibrary ERC20MetadataStorage {\\n    struct Layout {\\n        string name;\\n        string symbol;\\n        uint8 decimals;\\n    }\\n\\n    bytes32 internal constant STORAGE_SLOT =\\n        keccak256('solidstate.contracts.storage.ERC20Metadata');\\n\\n    function layout() internal pure returns (Layout storage l) {\\n        bytes32 slot = STORAGE_SLOT;\\n        assembly {\\n            l.slot := slot\\n        }\\n    }\\n\\n    function setName(Layout storage l, string memory name) internal {\\n        l.name = name;\\n    }\\n\\n    function setSymbol(Layout storage l, string memory symbol) internal {\\n        l.symbol = symbol;\\n    }\\n\\n    function setDecimals(Layout storage l, uint8 decimals) internal {\\n        l.decimals = decimals;\\n    }\\n}\\n\",\"keccak256\":\"0xccb98abab437affd99b1345d27aa517d3597972b52666dd0e788af2b966c0125\",\"license\":\"MIT\"},\"@solidstate/contracts/token/ERC20/metadata/IERC20Metadata.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.8;\\n\\nimport { IERC20MetadataInternal } from './IERC20MetadataInternal.sol';\\n\\n/**\\n * @title ERC20 metadata interface\\n */\\ninterface IERC20Metadata is IERC20MetadataInternal {\\n    /**\\n     * @notice return token name\\n     * @return token name\\n     */\\n    function name() external view returns (string memory);\\n\\n    /**\\n     * @notice return token symbol\\n     * @return token symbol\\n     */\\n    function symbol() external view returns (string memory);\\n\\n    /**\\n     * @notice return token decimals, generally used only for display purposes\\n     * @return token decimals\\n     */\\n    function decimals() external view returns (uint8);\\n}\\n\",\"keccak256\":\"0x22eefd0dbd7637f41c8bfc3662a4b1ae6f084f27f26e34cc9bf124e0aee10a01\",\"license\":\"MIT\"},\"@solidstate/contracts/token/ERC20/metadata/IERC20MetadataInternal.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.8;\\n\\n/**\\n * @title ERC20 metadata internal interface\\n */\\ninterface IERC20MetadataInternal {\\n\\n}\\n\",\"keccak256\":\"0x32464590a972a9325d20c7125d157594df9473b6496ce6a66df617c41c4039ec\",\"license\":\"MIT\"},\"contracts/CryptoGrow/facets/HarvestFacet.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\nimport {ERC20Base} from \\\"@solidstate/contracts/token/ERC20/base/ERC20Base.sol\\\";\\nimport {ERC20Extended} from \\\"@solidstate/contracts/token/ERC20/extended/ERC20Extended.sol\\\";\\nimport {ERC20Metadata} from \\\"@solidstate/contracts/token/ERC20/metadata/ERC20Metadata.sol\\\";\\n\\ncontract HRVSTFacet is ERC20Base, ERC20Extended, ERC20Metadata {\\n  function mint() external {\\n    uint256 amount = 1e18;\\n    _mint(msg.sender, amount);\\n  }\\n\\n  function mintTo(address _user) external {\\n    uint256 amount = 1e18;\\n    _mint(_user, amount);\\n  }\\n}\\n\",\"keccak256\":\"0x996d429bfb1764314bb47dfe75404b816f5787bdf80d35619e36502566b43514\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506109b6806100206000396000f3fe608060405234801561001057600080fd5b50600436106100cf5760003560e01c8063395093511161008c57806395d89b411161006657806395d89b41146101d0578063a457c2d7146101d8578063a9059cbb146101eb578063dd62ed3e146101fe57600080fd5b8063395093511461016257806370a0823114610175578063755edd17146101bd57600080fd5b806306fdde03146100d4578063095ea7b3146100f25780631249c58b1461011557806318160ddd1461011f57806323b872dd14610135578063313ce56714610148575b600080fd5b6100dc610211565b6040516100e991906107fa565b60405180910390f35b61010561010036600461086b565b610220565b60405190151581526020016100e9565b61011d610234565b005b61012761024a565b6040519081526020016100e9565b610105610143366004610895565b610274565b610150610289565b60405160ff90911681526020016100e9565b61010561017036600461086b565b6102b6565b6101276101833660046108d1565b6001600160a01b031660009081527fc991b2e918acaba8e5721668ed0b1982684e5a8692a621bcd2d7ef326bb015b4602052604090205490565b61011d6101cb3660046108d1565b6102c2565b6100dc6102d9565b6101056101e636600461086b565b6102e3565b6101056101f936600461086b565b6102ef565b61012761020c3660046108ec565b6102fc565b606061021b610308565b905090565b600061022d3384846103b9565b9392505050565b670de0b6b3a7640000610247338261048e565b50565b600061021b7fc991b2e918acaba8e5721668ed0b1982684e5a8692a621bcd2d7ef326bb015b65490565b6000610281848484610582565b949350505050565b600061021b7f2967a798b92539a1b9eefe4d8eb931f96b68d27665e276f1bee2d5db7f7430495460ff1690565b600061022d83836105a5565b670de0b6b3a76400006102d5828261048e565b5050565b606061021b6105e4565b600061022d8383610615565b600061022d33848461062b565b600061022d838361076e565b60607f2967a798b92539a1b9eefe4d8eb931f96b68d27665e276f1bee2d5db7f74304780546103369061091f565b80601f01602080910402602001604051908101604052809291908181526020018280546103629061091f565b80156103af5780601f10610384576101008083540402835291602001916103af565b820191906000526020600020905b81548152906001019060200180831161039257829003601f168201915b5050505050905090565b60006001600160a01b0384166103e257604051635a68b7ab60e01b815260040160405180910390fd5b6001600160a01b038316610408576040516262920b60e91b815260040160405180910390fd5b6001600160a01b0384811660008181527fc991b2e918acaba8e5721668ed0b1982684e5a8692a621bcd2d7ef326bb015b56020908152604080832094881680845294825291829020869055815186815291517f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b9259281900390910190a35060019392505050565b6001600160a01b0382166104b55760405163da007acd60e01b815260040160405180910390fd5b7fc991b2e918acaba8e5721668ed0b1982684e5a8692a621bcd2d7ef326bb015b680547fc991b2e918acaba8e5721668ed0b1982684e5a8692a621bcd2d7ef326bb015b491839160009061050a90849061095a565b90915550506001600160a01b0383166000908152602082905260408120805484929061053790849061095a565b90915550506040518281526001600160a01b038416906000907fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef9060200160405180910390a3505050565b600061058f8433846107b8565b61059a84848461062b565b506001949350505050565b6000806105b2338561076e565b90508281018111156105d75760405163d256efb160e01b815260040160405180910390fd5b61028133858584016103b9565b60607f2967a798b92539a1b9eefe4d8eb931f96b68d27665e276f1bee2d5db7f74304760010180546103369061091f565b60006106223384846107b8565b50600192915050565b60006001600160a01b038416610654576040516368551d5f60e01b815260040160405180910390fd5b6001600160a01b03831661067b576040516320a2645160e21b815260040160405180910390fd5b6001600160a01b03841660009081527fc991b2e918acaba8e5721668ed0b1982684e5a8692a621bcd2d7ef326bb015b46020819052604090912054808411156106d757604051637183160b60e01b815260040160405180910390fd5b6001600160a01b0380871660009081526020849052604080822087850390559187168152908120805486929061070e90849061095a565b92505081905550846001600160a01b0316866001600160a01b03167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef8660405161075a91815260200190565b60405180910390a350600195945050505050565b6001600160a01b0391821660009081527fc991b2e918acaba8e5721668ed0b1982684e5a8692a621bcd2d7ef326bb015b56020908152604080832093909416825291909152205490565b60006107c4848461076e565b9050808211156107e65760405162e14ccf60e11b815260040160405180910390fd5b6107f384848484036103b9565b5050505050565b600060208083528351808285015260005b818110156108275785810183015185820160400152820161080b565b81811115610839576000604083870101525b50601f01601f1916929092016040019392505050565b80356001600160a01b038116811461086657600080fd5b919050565b6000806040838503121561087e57600080fd5b6108878361084f565b946020939093013593505050565b6000806000606084860312156108aa57600080fd5b6108b38461084f565b92506108c16020850161084f565b9150604084013590509250925092565b6000602082840312156108e357600080fd5b61022d8261084f565b600080604083850312156108ff57600080fd5b6109088361084f565b91506109166020840161084f565b90509250929050565b600181811c9082168061093357607f821691505b6020821081141561095457634e487b7160e01b600052602260045260246000fd5b50919050565b6000821982111561097b57634e487b7160e01b600052601160045260246000fd5b50019056fea2646970667358221220e81063fb28b786902845c0226f5a77f3e87b3c0340b7c1eec3224760bd23e9f564736f6c63430008090033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100cf5760003560e01c8063395093511161008c57806395d89b411161006657806395d89b41146101d0578063a457c2d7146101d8578063a9059cbb146101eb578063dd62ed3e146101fe57600080fd5b8063395093511461016257806370a0823114610175578063755edd17146101bd57600080fd5b806306fdde03146100d4578063095ea7b3146100f25780631249c58b1461011557806318160ddd1461011f57806323b872dd14610135578063313ce56714610148575b600080fd5b6100dc610211565b6040516100e991906107fa565b60405180910390f35b61010561010036600461086b565b610220565b60405190151581526020016100e9565b61011d610234565b005b61012761024a565b6040519081526020016100e9565b610105610143366004610895565b610274565b610150610289565b60405160ff90911681526020016100e9565b61010561017036600461086b565b6102b6565b6101276101833660046108d1565b6001600160a01b031660009081527fc991b2e918acaba8e5721668ed0b1982684e5a8692a621bcd2d7ef326bb015b4602052604090205490565b61011d6101cb3660046108d1565b6102c2565b6100dc6102d9565b6101056101e636600461086b565b6102e3565b6101056101f936600461086b565b6102ef565b61012761020c3660046108ec565b6102fc565b606061021b610308565b905090565b600061022d3384846103b9565b9392505050565b670de0b6b3a7640000610247338261048e565b50565b600061021b7fc991b2e918acaba8e5721668ed0b1982684e5a8692a621bcd2d7ef326bb015b65490565b6000610281848484610582565b949350505050565b600061021b7f2967a798b92539a1b9eefe4d8eb931f96b68d27665e276f1bee2d5db7f7430495460ff1690565b600061022d83836105a5565b670de0b6b3a76400006102d5828261048e565b5050565b606061021b6105e4565b600061022d8383610615565b600061022d33848461062b565b600061022d838361076e565b60607f2967a798b92539a1b9eefe4d8eb931f96b68d27665e276f1bee2d5db7f74304780546103369061091f565b80601f01602080910402602001604051908101604052809291908181526020018280546103629061091f565b80156103af5780601f10610384576101008083540402835291602001916103af565b820191906000526020600020905b81548152906001019060200180831161039257829003601f168201915b5050505050905090565b60006001600160a01b0384166103e257604051635a68b7ab60e01b815260040160405180910390fd5b6001600160a01b038316610408576040516262920b60e91b815260040160405180910390fd5b6001600160a01b0384811660008181527fc991b2e918acaba8e5721668ed0b1982684e5a8692a621bcd2d7ef326bb015b56020908152604080832094881680845294825291829020869055815186815291517f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b9259281900390910190a35060019392505050565b6001600160a01b0382166104b55760405163da007acd60e01b815260040160405180910390fd5b7fc991b2e918acaba8e5721668ed0b1982684e5a8692a621bcd2d7ef326bb015b680547fc991b2e918acaba8e5721668ed0b1982684e5a8692a621bcd2d7ef326bb015b491839160009061050a90849061095a565b90915550506001600160a01b0383166000908152602082905260408120805484929061053790849061095a565b90915550506040518281526001600160a01b038416906000907fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef9060200160405180910390a3505050565b600061058f8433846107b8565b61059a84848461062b565b506001949350505050565b6000806105b2338561076e565b90508281018111156105d75760405163d256efb160e01b815260040160405180910390fd5b61028133858584016103b9565b60607f2967a798b92539a1b9eefe4d8eb931f96b68d27665e276f1bee2d5db7f74304760010180546103369061091f565b60006106223384846107b8565b50600192915050565b60006001600160a01b038416610654576040516368551d5f60e01b815260040160405180910390fd5b6001600160a01b03831661067b576040516320a2645160e21b815260040160405180910390fd5b6001600160a01b03841660009081527fc991b2e918acaba8e5721668ed0b1982684e5a8692a621bcd2d7ef326bb015b46020819052604090912054808411156106d757604051637183160b60e01b815260040160405180910390fd5b6001600160a01b0380871660009081526020849052604080822087850390559187168152908120805486929061070e90849061095a565b92505081905550846001600160a01b0316866001600160a01b03167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef8660405161075a91815260200190565b60405180910390a350600195945050505050565b6001600160a01b0391821660009081527fc991b2e918acaba8e5721668ed0b1982684e5a8692a621bcd2d7ef326bb015b56020908152604080832093909416825291909152205490565b60006107c4848461076e565b9050808211156107e65760405162e14ccf60e11b815260040160405180910390fd5b6107f384848484036103b9565b5050505050565b600060208083528351808285015260005b818110156108275785810183015185820160400152820161080b565b81811115610839576000604083870101525b50601f01601f1916929092016040019392505050565b80356001600160a01b038116811461086657600080fd5b919050565b6000806040838503121561087e57600080fd5b6108878361084f565b946020939093013593505050565b6000806000606084860312156108aa57600080fd5b6108b38461084f565b92506108c16020850161084f565b9150604084013590509250925092565b6000602082840312156108e357600080fd5b61022d8261084f565b600080604083850312156108ff57600080fd5b6109088361084f565b91506109166020840161084f565b90509250929050565b600181811c9082168061093357607f821691505b6020821081141561095457634e487b7160e01b600052602260045260246000fd5b50919050565b6000821982111561097b57634e487b7160e01b600052601160045260246000fd5b50019056fea2646970667358221220e81063fb28b786902845c0226f5a77f3e87b3c0340b7c1eec3224760bd23e9f564736f6c63430008090033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "allowance(address,address)": {
+        "params": {
+          "holder": "approver of allowance",
+          "spender": "recipient of allowance"
+        },
+        "returns": {
+          "_0": "token allowance"
+        }
+      },
+      "approve(address,uint256)": {
+        "details": "prefer ERC20Extended functions to avoid transaction-ordering vulnerability (see https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729)",
+        "params": {
+          "amount": "quantity of tokens approved for spending",
+          "spender": "recipient of allowance"
+        },
+        "returns": {
+          "_0": "success status (always true; otherwise function should revert)"
+        }
+      },
+      "balanceOf(address)": {
+        "params": {
+          "account": "address to query"
+        },
+        "returns": {
+          "_0": "token balance"
+        }
+      },
+      "decimals()": {
+        "returns": {
+          "_0": "token decimals"
+        }
+      },
+      "decreaseAllowance(address,uint256)": {
+        "params": {
+          "amount": "quantity by which to decrease allowance",
+          "spender": "address whose allowance to decrease"
+        },
+        "returns": {
+          "_0": "success status (always true; otherwise function will revert)"
+        }
+      },
+      "increaseAllowance(address,uint256)": {
+        "params": {
+          "amount": "quantity by which to increase allowance",
+          "spender": "address whose allowance to increase"
+        },
+        "returns": {
+          "_0": "success status (always true; otherwise function will revert)"
+        }
+      },
+      "name()": {
+        "returns": {
+          "_0": "token name"
+        }
+      },
+      "symbol()": {
+        "returns": {
+          "_0": "token symbol"
+        }
+      },
+      "totalSupply()": {
+        "returns": {
+          "_0": "token supply"
+        }
+      },
+      "transfer(address,uint256)": {
+        "params": {
+          "amount": "quantity of tokens to transfer",
+          "recipient": "beneficiary of token transfer"
+        },
+        "returns": {
+          "_0": "success status (always true; otherwise function should revert)"
+        }
+      },
+      "transferFrom(address,address,uint256)": {
+        "params": {
+          "amount": "quantity of tokens to transfer",
+          "holder": "holder of tokens prior to transfer",
+          "recipient": "beneficiary of token transfer"
+        },
+        "returns": {
+          "_0": "success status (always true; otherwise function should revert)"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "allowance(address,address)": {
+        "notice": "query the allowance granted from given holder to given spender"
+      },
+      "approve(address,uint256)": {
+        "notice": "grant approval to spender to spend tokens"
+      },
+      "balanceOf(address)": {
+        "notice": "query the token balance of given account"
+      },
+      "decimals()": {
+        "notice": "return token decimals, generally used only for display purposes"
+      },
+      "decreaseAllowance(address,uint256)": {
+        "notice": "decrease spend amount granted to spender"
+      },
+      "increaseAllowance(address,uint256)": {
+        "notice": "increase spend amount granted to spender"
+      },
+      "name()": {
+        "notice": "return token name"
+      },
+      "symbol()": {
+        "notice": "return token symbol"
+      },
+      "totalSupply()": {
+        "notice": "query the total minted token supply"
+      },
+      "transfer(address,uint256)": {
+        "notice": "transfer tokens to given recipient"
+      },
+      "transferFrom(address,address,uint256)": {
+        "notice": "transfer tokens to given recipient on behalf of given holder"
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

@@ -1,12 +1,14 @@
 import { parseUnits } from "ethers/lib/utils";
 import { DeployFunction } from "hardhat-deploy/types";
-import { Diamond__factory, InitDiamond__factory, InitDiamond, HRVSTFacet } from "../types";
+import { InitDiamond__factory } from "../types";
 import { Ship } from "../utils";
 
 const func: DeployFunction = async (hre) => {
   const { deploy } = await Ship.init(hre);
 
-  await deploy(InitDiamond__factory);
+  await deploy(InitDiamond__factory, {
+    args: [],
+  });
 };
 
 export default func;
