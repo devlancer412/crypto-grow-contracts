@@ -15,7 +15,6 @@ import { deployments } from "hardhat";
 import chai from "chai";
 import { solidity } from "ethereum-waffle";
 import { Ship } from "../utils";
-import { parseEther } from "ethers/lib/utils";
 import { ContractWithSelectors } from "../utils/FacetUtils";
 
 chai.use(solidity);

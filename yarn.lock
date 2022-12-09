@@ -828,11 +828,6 @@
     "@types/sinon-chai" "^3.2.3"
     "@types/web3" "1.0.19"
 
-"@openzeppelin/contracts@^4.7.3":
-  version "4.8.0"
-  resolved "https://registry.yarnpkg.com/@openzeppelin/contracts/-/contracts-4.8.0.tgz#6854c37df205dd2c056bdfa1b853f5d732109109"
-  integrity sha512-AGuwhRRL+NaKx73WKRNzeCxOCOCxpaqF+kp8TJ89QzAipSwZy/NoflkWaL9bywXFRhIzXt8j38sfF7KBKCPWLw==
-
 "@resolver-engine/core@^0.3.3":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@resolver-engine/core/-/core-0.3.3.tgz#590f77d85d45bc7ecc4e06c654f41345db6ca967"
@@ -976,6 +971,11 @@
   integrity sha512-6dKnHZn7fg/iQATVEzqyUOyEidbn05q7YA2mQ9hC0MMXhhV3/JrsxmFSYZAcr7j1yUP700LLhTruvJ3MiQmjJg==
   dependencies:
     antlr4ts "^0.5.0-alpha.4"
+
+"@solidstate/contracts@^0.0.49":
+  version "0.0.49"
+  resolved "https://registry.yarnpkg.com/@solidstate/contracts/-/contracts-0.0.49.tgz#406c426b726fc13d3f98573d58b53c741bfada0b"
+  integrity sha512-yWVdkgVZ62Unm/0ACdeFnnXNR1y2fH9FaacV27LJQeJ00P7yksdA6/JpmTJzS2M8hglAk2toWilkfa09j+zrqA==
 
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
