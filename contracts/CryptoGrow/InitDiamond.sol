@@ -6,6 +6,9 @@ import {ILink} from "./interfaces/ILink.sol";
 import {LibAppStorage} from "./libraries/LibAppStorage.sol";
 import {ERC20MetadataStorage} from "@solidstate/contracts/token/ERC20/metadata/ERC20MetadataStorage.sol";
 
+/**
+ * @title Diamond init contract.
+ */
 contract InitDiamond {
   struct Args {
     address dao;
@@ -22,6 +25,10 @@ contract InitDiamond {
     string symbol;
   }
 
+  /**
+   * @notice Init app storate state.
+   * @param _args Init params
+   */
   function init(Args memory _args) external {
     LibAppStorage.Layout storage appLayout = LibAppStorage.layout();
     appLayout.dao = _args.dao;
@@ -47,6 +54,12 @@ contract InitDiamond {
     erc20Layout.decimals = 18;
   }
 
+  /**
+   * @notice Generate domain separatore
+   * @param name Name of app
+   * @param version Version of app
+   * @return bytes32 Domain separatore
+   */
   function _domainSeparator(
     string memory name,
     string memory version

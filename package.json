@@ -46,7 +46,8 @@
     "husky:init": "husky install",
     "husky:commit": "lint-staged",
     "husky:push": "yarn lint:fix",
-    "abigen:py": "abi-gen --language Python --out pytypes --abis "
+    "abigen:py": "abi-gen --language Python --out pytypes --abis ",
+    "docgen": "npx hardhat docgen"
   },
   "lint-staged": {
     "**/*.{ts,js,sol}": [
@@ -90,6 +91,7 @@
     "hardhat": "^2.9.3",
     "hardhat-abi-exporter": "^2.3.1",
     "hardhat-deploy": "^0.11.4",
+    "hardhat-docgen": "^1.3.0",
     "hardhat-gas-reporter": "^1.0.6",
     "hardhat-preprocessor": "^0.1.4",
     "hardhat-storage-layout": "^0.1.6",

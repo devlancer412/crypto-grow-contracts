@@ -14,6 +14,7 @@ import "hardhat-watcher";
 import "solidity-coverage";
 import "hardhat-storage-layout";
 import "dotenv/config";
+import "hardhat-docgen";
 
 import "./tasks/account";
 import "./tasks/verify";
@@ -116,6 +117,11 @@ const config: HardhatUserConfig = {
   },
   preprocess: {
     eachLine: removeConsoleLog((hre) => hre.network.name !== "hardhat" && hre.network.name !== "localhost"),
+  },
+  docgen: {
+    path: "./docs",
+    clear: true,
+    runOnCompile: true,
   },
 };
 
